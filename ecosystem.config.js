@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:livissnack/webhook.git',
       path : '/var/www/webhook',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'cp .env.example .env && npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
