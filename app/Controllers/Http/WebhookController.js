@@ -1,9 +1,12 @@
 'use strict'
-const Logger = use('Logger')
 
 class WebhookController {
-  async index({request}) {
-    Logger.info(`${new Date()} 执行完毕！错误信息：？`, request.headers())
+  async index({request, response}) {
+    response.json({
+      status: 'ok',
+      msg: '请求成功',
+      data: []
+    })
   }
 }
 
