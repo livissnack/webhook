@@ -16,5 +16,5 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('test', 'WebhookController.index')
 Route.on('/').render('welcome')
+Route.get('test', 'WebhookController.index')
